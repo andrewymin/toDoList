@@ -13,7 +13,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
-// let port = process.env.PORT;
+let port = process.env.PORT;
 const atlasPass = process.env.atlasPass;
 
 // function capitalizeFirstLetter(string) {
@@ -179,10 +179,10 @@ app.post('/delete', (req, res)=>{
 // });
 // console.log(foundList.items[4]._id)
 
-// if (port == null || port == "") {
-//   port = 3000;
-// }
+if (port == null || port == "") {
+  port = 3000;
+}
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(port, () => {
   console.log(`Server has started`);
 });
