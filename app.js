@@ -60,7 +60,7 @@ const List = mongoose.model("List", listSchema);
 
 // Need a favicon url since browsers will by default try to request /favicon.ico
 // Which in this case would create a new List with favicon
-app.get('/favicon.ico', (req, res) => res.status(204));
+app.get('/favicon.ico', (req, res) => {res.status(204)});
 
 app.get('/', (req, res) => {
 
