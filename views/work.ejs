@@ -1,0 +1,25 @@
+<%- include('partials/header');%>
+
+
+<h1 class='date'><%=listTitle%></h1>
+
+<div class="list">
+  <ul>
+    <% listItems.forEach(item => { %>
+    <li><input type="checkbox">
+      <div>
+        <%= item %>
+      </div>
+    </li>
+    <% }); %>
+
+  </ul>
+
+  <form class="ni" action="/" method="post">
+    <input type="text" name="ni" placeholder="New Item" autocomplete="off">
+    <button type="submit" name="button" value="<%=listTitle%>">+</button>
+  </form>
+</div>
+
+
+<%- include('partials/footer');%>
