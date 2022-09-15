@@ -29,6 +29,7 @@ body {
   border-radius: 4px;
   box-shadow: 1px 2px 11px grey;
   margin: 50px 0;
+  width: 25rem;
 }
 
 .list {

@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import {fileURLToPath} from 'url';
 import path from 'path';
-// import {getDate, getDay} from './date.js';
+import {getDate, getDay} from './date.js';
 import mongoose from 'mongoose';
 import _ from "lodash";
 import dotenv from 'dotenv';
@@ -71,10 +71,10 @@ app.get('/', (req, res) => {
         (err) ? console.log(err): console.log("Successfully added default items.")});
         items = defaultItems;
       }
-
-      res.render('list', {listTitle: "Today", listItems: items});
+      let currentDate = getDate();
+      res.render('list', {listTitle: "Today", listItems: items, currentDay: currentDate});
     });
-  // let currentDay = getDate();
+
 });
 
 
@@ -96,7 +96,8 @@ app.get("/:customListName", (req, res)=>{
         res.redirect('/'+ customListName);
 
       } else {
-        res.render('list', {listTitle: foundList.name, listItems: foundList.items});
+        let currentDate = getDate();
+        res.render('list', {listTitle: foundList.name, listItems: foundList.items, currentDay: currentDate});
       }
     }
   });
