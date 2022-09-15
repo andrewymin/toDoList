@@ -14,7 +14,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 let port = process.env.PORT;
-let atlasPass = process.env.ATLASPASS;
+// let atlasPass = process.env.ATLASPASS;
+let URL = process.env.URI
+
 // function capitalizeFirstLetter(string) {
 //   return string.charAt(0).toUpperCase() + string.slice(1);
 // }
@@ -28,7 +30,7 @@ app.use(express.static("public"));
 
 // **********Localhost connection
 // await mongoose.connect('mongodb://localhost:27017/toDoListDB');
-await mongoose.connect(`mongodb+srv://testadmin:${atlasPass}@cluster0.hcpgfev.mongodb.net/toDoListDB`);
+await mongoose.connect(URL)
 
 const itemsSchema = new mongoose.Schema({
   name: {type: String, required: [true, "Must add to do item!"]}
