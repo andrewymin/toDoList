@@ -29,7 +29,7 @@ app.use(express.static("public"));
 
 // **********Localhost connection
 // await mongoose.connect('mongodb://localhost:27017/toDoListDB');
-await mongoose.connect(`mongodb+srv://adminSumo:${atlasPass}@cluster0.hcpgfev.mongodb.net/toDoListDB`);
+await mongoose.connect(`mongodb+srv://testadmin:${atlasPass}@cluster0.hcpgfev.mongodb.net/toDoListDB`);
 
 const itemsSchema = new mongoose.Schema({
   name: {type: String, required: [true, "Must add to do item!"]}
