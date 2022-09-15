@@ -14,7 +14,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 let port = process.env.PORT;
-// let atlasPass = process.env.ATLASPASS;
 let URL = process.env.URI
 
 // function capitalizeFirstLetter(string) {

@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #EAE9FD;
+  background: #EEF2E6;
   object-fit: cover;
   /* overflow: hidden; */
   font-family: "lucida sans", sans-serif;
@@ -13,7 +13,7 @@ body {
 }
 
 .bgTriangle {
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #EAE9FD 50%);
+  background-image: -webkit-linear-gradient(65deg, #1C6758 50%, #EEF2E6 50%);
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -23,7 +23,7 @@ body {
 
 .date {
   color: #fff;
-  background: #A683E3;
+  background: #1C6758;
   display: inline-block;
   padding: 16px;
   border-radius: 4px;
@@ -57,7 +57,7 @@ input[type=checkbox] {
 
 input:checked+div {
   text-decoration: line-through;
-  text-decoration-color: #A683E3;
+  text-decoration-color: #1C6758;
 }
 
 form {
@@ -86,7 +86,7 @@ button {
   position: absolute;
   top: 10px;
   right: 15px;
-  background-color: #A683E3;
+  background-color: #1C6758;
   border: none;
   border-radius: 31px;
   color: white;
