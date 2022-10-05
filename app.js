@@ -7,8 +7,6 @@ import mongoose from 'mongoose';
 import _ from "lodash";
 import dotenv from 'dotenv';
 dotenv.config();
-// import jQuery from "jquery";
-// window.$ = window.jQuery = jQuery;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
