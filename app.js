@@ -183,5 +183,5 @@ if (port == null || port == "") {
 }
 
 app.listen(port, () => {
-  console.log(`Server has started`);
+  console.log(`Server has started on ${port}`);
 });

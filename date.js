@@ -11,8 +11,10 @@ export const getDate = () => {
   let options = {
     weekday: 'long',
     day: "numeric",
-    month: 'long'
+    month: 'long',
   };
+
+  options.timeZone = 'UTC';
 
   return today.toLocaleDateString("en-US", options);
 
