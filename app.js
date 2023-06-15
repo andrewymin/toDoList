@@ -19,11 +19,13 @@ let URL = process.env.URI
 // }
 // after npm i ejs, setting app to be able to use ejs
 // also just like Flask static & templates folder, ejs uses: views
-app.set('view engine', 'ejs');
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 // app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.static("public"));
+
+app.set('view engine', 'ejs');
 
 // **********Localhost connection
 // await mongoose.connect('mongodb://localhost:27017/toDoListDB');
